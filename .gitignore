@@ -1,14 +1,23 @@
-echo "/backend/node_modules
-/backend/.env
+# Node modules
+/backend/node_modules
 /frontend/node_modules
+
+# Environment files
+/backend/.env
 /frontend/.env
+
+# Build / Distribution
 /frontend/build
 /backend/dist
+
+# Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# OS / Editor files
 .DS_Store
 Thumbs.db
 .vscode/
-.idea/" > .gitignore
+.idea/
