@@ -121,6 +121,8 @@ async function start() {
   const postRoutes = (await import('./routes/posts.js')).default;
   const friendRoutes = (await import('./routes/friends.js')).default;
   const chatRoutes = (await import('./routes/chats.js')).default;
+ 
+  app.get('/healthz', (req, res) => res.send('OK'));
 
   app.use('/auth', authRoutes);
   app.use('/api/posts', postRoutes);
