@@ -29,7 +29,7 @@ export const useAuth = () => {
   // };
 
   const login = () => {
-  window.location.href = 'https://social-app-backend-k663.onrender.com/auth/google';  // Backend auth
+  window.location.href = 'https://social-app-backend-5l4i.onrender.com/auth/google';  // Backend auth
 };
 
   const logout = () => {
