@@ -24,9 +24,13 @@ export const useAuth = () => {
     }
   }, [navigate]);
 
+  // const login = () => {
+  //   window.location.href = '/auth/google';  // Backend auth
+  // };
+
   const login = () => {
-    window.location.href = 'http://localhost:5000/auth/google';  // Backend auth
-  };
+  window.location.href = 'https://social-app-backend-k663.onrender.com/auth/google';  // Backend auth
+};
 
   const logout = () => {
     localStorage.removeItem('token');

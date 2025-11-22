@@ -1,7 +1,14 @@
 import axios from 'axios';
 
+// const api = axios.create({
+//   baseURL: '',
+//   headers: { 'Content-Type': 'application/json' }
+// });
+
+
+// api.js
 const api = axios.create({
-  baseURL: '',
+  baseURL: 'https://social-app-backend-k663.onrender.com', // Render backend
   headers: { 'Content-Type': 'application/json' }
 });
 

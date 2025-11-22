@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 const MediaItem = ({ url }) => {
-  const fullUrl = `http://localhost:5000${url}`;
+  const fullUrl = `https://social-app-backend-k663.onrender.com${url}`;
   const isVideo = /\.(mp4|webm|ogg|mov|avi)$/i.test(fullUrl);
   const videoRef = useRef(null);  // <-- ADD: Ref to video element
   const [inView, setInView] = React.useState(false);  // Local state for control
