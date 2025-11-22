@@ -6,7 +6,7 @@
 
 /frontend/node_modules
 
-# Environment files
+# Environment files d
 /backend/.env
 /frontend/.env
 
