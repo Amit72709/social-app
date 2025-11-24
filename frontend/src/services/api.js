@@ -1,12 +1,5 @@
 import axios from 'axios';
 
-// const api = axios.create({
-//   baseURL: '',
-//   headers: { 'Content-Type': 'application/json' }
-// });
-
-
-// api.js
 const api = axios.create({
   baseURL: 'https://social-app-backend-5l4i.onrender.com', // Render backend
   headers: { 'Content-Type': 'application/json' }

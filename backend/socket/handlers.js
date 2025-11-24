@@ -109,4 +109,27 @@ export default (io, socket) => {
     io.to(u1).emit('new-message', populated);
     io.to(u2).emit('new-message', populated);
   });
+
+  /* -------------------------------------------
+     TYPING INDICATOR (NEW)
+  --------------------------------------------*/
+  socket.on('typing', ({ chatId }) => {
+    const [u1, u2] = chatId.split('_');
+    const other = socket.userId.toString() === u1 ? u2 : u1;
+
+    socket.to(other).emit('typing', {
+      chatId,
+      from: socket.userId,
+    });
+  });
+
+  socket.on('stop-typing', ({ chatId }) => {
+    const [u1, u2] = chatId.split('_');
+    const other = socket.userId.toString() === u1 ? u2 : u1;
+
+    socket.to(other).emit('stop-typing', {
+      chatId,
+      from: socket.userId,
+    });
+  });
 };
